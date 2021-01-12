@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 20px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 5px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  </style>
+
+  <title>Razer Mercury Collection</title>
+</head>
+
+<body onload="prepare()" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top height:50px">
+    <a class="navbar-brand" href="#">
+      <img src="img/raz_logo.jpg" alt="Logo" style="width:40px;">
+    </a>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <!-- Links -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Gallery</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#video">Video</a>
+            <a class="dropdown-item" href="#image">Image</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#collection">Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reward">Reward</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#connect">Connect</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Mercury</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" onclick="accountClicked()">Account</a>
+        </li>
+        <li class="nav-item">
+          <a id="logout" class="nav-link" href="#" onclick="logOut()"></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav  mx-auto">
+        <li class="nav-item">
+          <p class="formText" id="mess">Hi Anonymous!</p>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <form class="nav-item form-inline ">
+          <input class="form-control mr-sm-2 justify-content-right" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit" onclick="searched()">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <!-- Gallery Section -->
+  <div class="black-container" id="" style="margin-top: 50px">
+    <div class="container">
+      <h1 class="hero" style="color:#66b933">First Admire Our Mercury Collection</h1>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <video controls="true" class="embed-responsive-item" id="video">
+        <source src="img/MercuryIntro.mp4" type="video/mp4" />
+      </video> </div>
+
+
+    <div id="image">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/razer_mecu1.jpg" alt="Banner One" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="img/razer_mecu2.jpg" alt="Banner Two" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="img/razer_mecu3.jpg" alt="Banner Three" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="img/razer_mecu4.jpg" alt="Banner Three" width="1100" height="500">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Collection Section -->
+  <div id="collection" style="background-color: lightslategray">
+    <div class="black-container">
+      <h1 class="hero" style="color:#66b933">Then Choose Your Best Gears</h1>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-end: 0% ">
+          <img class="card-img-top" src="img/razer_p1.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Basilisk - Mercury Edition</h4>
+            <p class="card-text"> US$69.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="0" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="9"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Mice/Razer-Basilisk/p/RZ01-02330300-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px;">
+          <img class="card-img-top" src="img/razer_p2.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Huntsman-Mercury Edition</h4>
+            <p class="card-text text-center"> US$149.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="1" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="10"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Keyboard/Razer-Huntsman/p/RZ03-02521800-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-start: 0%">
+          <img class="card-img-top" src="img/razer_p3.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Kraken - Mercury Edition</h4>
+            <p class="card-text text-center"> US$79.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="2" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="11"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Audio/Razer-Kraken/p/RZ04-02830300-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-end: 0%">
+          <img class="card-img-top" src="img/razer_p4.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Base Station Chroma-ME</h4>
+            <p class="card-text"> US$59.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="3" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="12"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/gaming-accessories/razer-base-station-chroma">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px;">
+          <img class="card-img-top" src="img/razer_p5.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Seiren X - Mercury Edition</h4>
+            <p class="card-text text-center"> US$99.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="4" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="13"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/gaming-audio/razer-seiren-x">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-start: 0%">
+          <img class="card-img-top" src="img/razer_p6.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Goliathus Extended-ME</h4>
+            <p class="card-text text-center"> US$59.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="5" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="14"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Mouse-Mat/Razer-Goliathus-Chroma/p/RZ02-02500314-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-end: 0%">
+          <img class="card-img-top" src="img/razer_p7.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">The Razer Blade 15 -RTX 2070-512GB-ME</h4>
+            <p class="card-text"> US$1,599.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="6" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="15"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-System/Razer-Blade-Stealth-13/p/RZ09-02812EQ1-R3U1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px;">
+          <img class="card-img-top" src="img/razer_p8.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer BlackWidow Lite - Mercury Edition</h4>
+            <p class="card-text text-center"> US$89.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="7" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="16"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Keyboard/Razer-BlackWidow-Lite/p/RZ03-02640700-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="width:300px; margin-inline-start: 0%">
+          <img class="card-img-top" src="img/razer_p9.jpg" alt="Card image" style="background-color:black">
+          <div class="card-body" style="background-color:dimgray">
+            <h4 class="card-title">Razer Atheris - Mercury Edition</h4>
+            <p class="card-text text-center"> US$49.99 </p>
+            <div class="row">
+              <div class="col-8" style="text-align: left">
+                <span><i class="fas fa-heart fa-2x" style="color:black;" id="8" onclick="btnClicked(id)"></i></span>
+                <span><i class=" fas fa-thumbs-up fa-2x" style="color:black;" id="17"
+                    onclick="btnClicked(id)"></i></span>
+              </div>
+              <div class="col-4" style="text-align: right">
+                <a target="_blank" rel="noopener noreferrer"
+                  href="https://www.razer.com/Gaming-Mice/Razer-Atheris/p/RZ01-02170300-R3M1">
+                  <i class='fas fa-info-circle fa-2x' style="color: black"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="black-container" id="reward">
+    <div class="container">
+      <h1 class="hero" style="color:#66b933">Now You Ready To Go!</h1>
+    </div>
+    <!-- 16:9 aspect ratio -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <video id="video2" controls="true" preload="auto" class="embed-responsive-item">
+        <source src="img/ReadyPlay.mp4" type="video/mp4" />
+      </video> </div>
+
+    <!-- Connect Section -->
+    <div id="connect" class="containerImage" style="margin-top: 0%">
+      <img src="img/connect_bg.jpg" alt="Connect" style="width:100%;">
+      <div class="top-right">
+        <h1 class="formText" style="color: green; font-weight: bold; font-size: 30px">Connect Razer On Social Media</h1>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Razer/?brand_redir=13848807575"
+          class="fa fa-facebook" id="fbIcon"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Razer" class="fa fa-twitter"></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/razer/"
+          class="fa fa-instagram"></a>
+      </div>
+    </div>
+
+    <!-- About Mercury Section -->
+    <div id="about" class="black-container">
+      <div class="container">
+        <h1 class="hero" style="color:  #66b933" id="aa">About Razer Mercury</h1>
+        <blockquote class="blockquote" style="margin-top: 5%">
+          <p class="formText" style="text-align: center ; font-size: 45px">A STATE OF FRESH </p>
+          <p class="formText" style="text-align: center">Let your gaming do the talking, and let your style speak
+            for
+            itself.<br>
+            Clean, crisp, contemporary—this is the new, expanded Razer Mercury collection.</p>
+          <p class="blockquote-footer text-center" style="color: white">From Razer Raiju T.E Mercury Edition
+            available in Europe & Asia Pacific.e</p>
+        </blockquote>
+      </div>
+
+      <section style="margin-left: 5%; margin-top:5%; margin-right: 5%; color: white">
+        <h1>Introduction</h1>
+        <p>For the past couple of years, Razer has been re-releasing some of its gaming accessories as part of its
+          Mercury
+          Collection, which gives all of those peripherals a white redesign. Today, Razer revealed the Mercury
+          Collection
+          for 2019, and there are nine accessories joining the collection in all, from mice and keyboards to
+          microphones
+          and even a PlayStation 4 controller.</p>
+      </section>
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>Atheris and Basilisk mice</h2>
+        <p>There are two mice kicking off the Mercury Collection in 2019. The first is a white edition of the
+          Atheris, a
+          wireless mini mouse that Razer claims is perfect for both work and play. While it probably isn’t as
+          comfortable as a full-sized mouse, it’s a good choice if you hate using trackpads and want to pack a mouse
+          in
+          your computer bag. Razer also says that the mouse can last more than 300 hours on a pair of AA batteries
+          when
+          connected using Bluetooth, which is nothing to stick your nose up at.</p>
+        <div class="text-center">
+          <img src="img/razer_mecu1.jpg" alt="Image of Product" width="800px" height="400px">
+        </div>
+      </section>
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>Goliathus Extended Chroma</h2>
+        <p>If you’re in the market for a mouse mat, the Goliathus is about as high-end as they come. Not only is
+          this
+          mat wide enough for your keyboard and mouse, but it also features Chroma lighting, so you can sync it to
+          your
+          PC accessories and really put on a light show. We’re not sure if it’s a good idea to buy a white mouse mat
+          given all of the use it’ll see over its life span, but if that doesn’t dissuade you, the Goliathus Mercury
+          Edition might be worth picking up for $59.99.</p>
+        <div class="text-center">
+          <img src="img/razer_mecu6.jpg" alt="Image of Product" width="800px" height="400px">
+        </div>
+      </section>
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>BlackWidow Lite and Razer Huntsman</h2>
+        <p>The BlackWidow is perhaps the most well-known gaming accessory from Razer, and the BlackWidow Lite
+          removes
+          the frills. With no number pad, it’s smaller than a lot of gaming keyboards, and the fact that it’s got
+          LED
+          backlighting makes it less expensive at $89.99 than many of Razer’s Chroma keyboards. Again, buying a
+          white
+          accessory that will see a lot of use is questionable, but as long as you don’t neglect upkeep, the
+          BlackWidow
+          Lite could indeed be a sharp addition to your rig.
+          The Huntsman, on the other hand, offers more of what we expect out of a gaming keyboard. Since it’s a
+          full-size keyboard, the number pad is present, and of course, there’s Chroma RGB lighting as well. The
+          opto-mechanical switches in the Huntsman even detect actuation using infrared beams, so it’s a pretty
+          serious
+          keyboard with an equally serious pirce tag of $149.99.
+        </p>
+        <div class="text-center">
+          <img src="img/razer_mecu2.jpg" alt="Image of Product" width="800px" height="400px">
+        </div>
+      </section>
+
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>Kraken and Razer Base Station</h2>
+        <p>The Kraken is the only Razer headset to get a Mercury Edition release this year, and for those who don’t
+          want
+          to split their audio setup between a pair of headphones and a dedicated mic, it’s worth a look. Outfitted
+          with
+          50mm drivers and gel cushions that claim to keep you cool when you’re wearing them for long periods of
+          time,
+          its $79.99 price point certainly makes it cheaper than buying headphones and a mic separately.
+          If you need a place to store that headset so it doesn’t get stepped on, Razer is hoping you’ll pick the
+          Base
+          Station Mercury Edition. Headset stands might not be the most essential PC gaming accessory, but the Base
+          Station at least has three USB 3.0 ports on the front of it. It also unsurprisingly has Chroma support
+          too,
+          like most of Razer’s accessories. Is that worth $59.99? That’s up to you, but at least the Mercury Edition
+          will match that white and gray Kraken you see above.
+        </p>
+        <div class="text-center">
+          <img src="img/razer_mecu3.jpg" alt="Image of Product" width="800px" height="400px">
+        </div>
+      </section>
+
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>Razer Seiren X</h2>
+        <p>If, on the other hand, you’d rather have a standalone mic to bump up voiceover quality while streaming or
+          making videos, the Seiren X Mercury Edition might be more your speed. Razer positions it as an entry-level
+          microphone for streamers who want to take a step beyond headsets with built-in mics, and its $99.99 price
+          tag
+          definitely reflects that. No Chroma support here, but we have a feeling it’s only a matter of time before
+          Razer finds a way to outfit the Seiren X with RGB lighting.</p>
+        <div class="text-center">
+          <img src="img/razer_mecu7.jpg" alt="Image of Product" width="800px" height="400px">
+        </div>
+      </section>
+
+
+      <section style="margin-left: 15%; margin-top:5%; margin-right: 15%; color: white">
+        <h2>Raiju Tournament Edition</h2>
+        <p>Finally, we come to an oddity in Razer’s Mercury Collection 2019 lineup – an accessory not meant
+          primarily
+          for PC gaming. The Raiju Tournament Edition modular controller was created for PlayStation 4, and it even
+          comes with its own companion app for configuration. The Raiju Tournament Edition isn’t available in the US
+          yet, but now that it’s getting a Mercury Edition refresh, maybe that will change.</p>
+      </section>
+      <div class="text-center">
+        <img src="img/razer_mecu4.jpg" alt="Image of Product" width="800px" height="400px">
+      </div>
+    </div>
+
+    <!-- Links Section -->
+    <footer style=" background-color: dimgray; margin-top: 5%">
+      <div class="row">
+        <div class="col">
+          <div class="text-center">
+            <h5 style="color: black">Razer’s Network</h5>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com">Razer.com</a> <br>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://gold.razer.com/?_ga=2.23151358.552184742.1560946520-1611007134.1560770641">Razer Gold &
+              Silver</a><br>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://deals.razer.com/?_ga=2.23151358.552184742.1560946520-1611007134.1560770641">Razer Game
+              Deals</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-center">
+            <h5 style="color: black">Razer’s Store</h5>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/store">Razer Store(Online)</a>
+            <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/razerstores">Razer
+              Store(Retail)</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/store-finder">Store Location
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/education">Razer’s Education
+              Program
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/newsletter">Razer’s Newsletter
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/affiliate">Razer’s Affiliate
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-center">
+            <h5 style="color: black">Razer’s Software</h5>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://razerid.razer.com/?_ga=2.229264088.552184742.1560946520-1611007134.1560770641">Razer
+              ID</a>
+            <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/synapse-3">Synapse 3</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/chroma">Chroma
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/cortex">Cortex
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://developer.razer.com/?_ga=2.229264088.552184742.1560946520-1611007134.1560770641">Developer
+              Portal
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-center">
+            <h5 style="color: black">Razer’s Company</h5>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/about-razer">About Razer</a>
+            <br>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://press.razer.com/?_ga=2.2928628.552184742.1560946520-1611007134.1560770641">Press
+              Room</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://investor.razer.com/html/index2.php">Investor
+              Ralation
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://careers.razer.com/?_ga=2.2928628.552184742.1560946520-1611007134.1560770641">Careers
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.zvntrs.com">zVentures
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-center">
+            <h5 style="color: black">Razer’s Helpers</h5>
+            <a target="_blank" rel="noopener noreferrer"
+              href="https://support.razer.com/?_ga=2.234063578.552184742.1560946520-1611007134.1560770641">Support
+            </a>
+            <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/help">Store FAQs</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/warranty">Warranty
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.razer.com/contact-us">Contact Us
+            </a> <br>
+            <a target="_blank" rel="noopener noreferrer" href="https://returns.narvar.com/razer/returns">Self-help
+              Returns
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2%">
+        <p style="color: black; font-style: italic;">Copyright © 2019 Razer Inc. All rights reserved. | Legal Terms |
+          Privacy Policy | Cookie Policy</p>
+      </div>
+    </footer>
+</body>
+<script>
+
+  function searched() {
+    alert("Sorry! This feature is not ready yet\r\nWe will come back with a better version soon!!!")
+  }
+
+  function accountClicked() {
+    localStorage.setItem("collection", "mercury")
+    window.open("login.html")
+  }
+
+  var numberofProducts = 18;
+  var items = new Array(numberofProducts).fill(false);
+  var icon = document.getElementById("1");
+  icon.setAttribute("disabled", "disabled");
+  icon.style.setProperty("disabled");
+
+  function btnClicked(id) {
+    var icon = document.getElementById(id);
+
+    if (Number(id) > 8) {
+      if (items[Number(id) - 9] == true) {
+        return false;
+      } else {
+        if (!items[id]) {
+          icon.style.color = "#1da1f2";
+          items[id] = true;
+        } else {
+          icon.style.color = "black";
+          items[id] = false;
+        }
+      }
+    } else {
+      if (items[Number(id) + 9] == true) {
+        return false;
+      } else {
+        if (!items[id]) {
+          icon.style.color = "#fa3e3e";
+          items[id] = true;
+        } else {
+          icon.style.color = "black";
+          items[id] = false;
+        }
+      }
+    }
+
+  }
+  function prepare() {
+    if (localStorage.getItem("uname") != "Anonymous") {
+      document.getElementById("logout").innerHTML = "Log Out?";
+    }
+    document.getElementById("mess").innerHTML = "Hi " + localStorage.getItem("uname") + "!";
+  }
+
+  function logOut() {
+    localStorage.setItem("uname", "Anonymous");
+    alert("Log Out Sucessfully!")
+    window.location.reload();
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

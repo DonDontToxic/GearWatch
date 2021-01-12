@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>About GearWatch</title>
+</head>
+<style>
+    .containerHome {
+        position: relative;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .containerHome:hover .overlay {
+        opacity: 1;
+    }
+
+    .textImage {
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    footer {
+        clear: both;
+        position: relative;
+        height: 150px;
+        width: 100%;
+        margin-top: -150px;
+        background-color: black
+    }
+
+    .imageFree {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container-fluid homebg" style="background-image: url(img/home_bg.jpg)">
+        <h1 class="homeText" style="font-weight:bold; font-size: 100px; text-align: center;">About GearWatch</h1>
+    </div>
+    <div class="container-fluid homebg" style="background-color: purple">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h2 class="homeText" style="color: black; font-size: 40px; font-weight: bold; margin-top: 5%">About GW
+                    </h1>
+                    <p class="homeText" style="color: black; font-size: 20px;"> Gear Watch is the place where gamers
+                        around the world can get acess in order to get the lastest update on new products from different
+                        famous brands on producing
+                        gaming gears. To illustrate, in this website, viewers can track on their favorite new
+                        collection as well as find some hot deals on these products which make this
+                        website
+                        special compared to others.
+                    </p>
+            </div>
+            <div class="col">
+                <img style="margin-top: 5%" src="img/br_logo.png" alt="The brand logo should be here">
+            </div>
+        </div>
+        <div class="center-text" style="margin-top: 5%">
+            <h1 class="homeText" style="font-weight:bold; font-size: 40px; text-align: center; color: black">All
+                Supported Brands</h1>
+        </div>
+        <div class="row" style="margin-top: 2%">
+            <div class="col"> <img width="150" height="150" src="img/raz_logo.jpg" alt="The brand logo should be here">
+            </div>
+            <div class="col"> <img width="150" height="150" src="img/logi_logo.png" alt="The brand logo should be here">
+            </div>
+            <div class="col"> <img width="150" height="150" src="img/cosair_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="150" height="150" src="img/roccat_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="150" height="150" src="img/ss_logo.jpg"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="150" height="150" src="img/ozone_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 2%">
+            <div class="col"> <img width="150" height="150" src="img/asus_logo.png" alt="The brand logo should be here">
+            </div>
+            <div class="col"> <img width="150" height="150" src="img/msi_logo.png" alt="The brand logo should be here">
+            </div>
+            <div class="col"> <img width="150" height="150" src="img/aorus_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="200" height="150" src="img/accer_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="200" height="150" src="img/dx_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+            <div class="col-sm-2"> <img img width="150" height="150" src="img/giga_logo.png"
+                    alt="The brand logo should be here">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid homebg" style="background-color: #590059">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h2 class="homeText" style="color: black; font-size: 40px; font-weight: bold; margin-top: 5%">Register
+                    Now!</h2>
+                <p class="homeText" style="color: black; font-size: 20px">
+                    In addition, with register to be a true member of this website, user
+                    can also gain different benefits such as reciveing some code in oder to get extra discount on
+                    random products. For example, right at this moment, if you are new to this website, please start
+                    to sign up an account to get a 10% discount code on your payments for razer products belong to
+                    two new collection Mercury and Quartz. </p>
+            </div>
+            <div class="col">
+                <img style="margin-top: 5%" width="200" height="200" onclick="regClicked()" src="img/register_gif.gif"
+                    alt="The gif should be here">
+            </div>
+        </div>
+        <h2 class="homeText"
+            style="color: black; font-size: 40px; font-weight: bold; margin-top: 5%;text-align: center">Lastest
+            Collection</h2>
+        <div class="row" style="margin-top: 2%;">
+            <div class="col" style="text-align: center">
+                <h3 style="color: white">Razer Mercury</h3>
+                <div class="containerHome" onclick="image1Clicked()" style="cursor: pointer">
+                    <img class="image" src="img/razer_home.png" alt="Product image should be here">
+                    <div class="overlay" style="background-color: white">
+                        <div class="textImage" style="color: black">View More?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="text-align: center">
+                <h3 style="color: palevioletred">Razer Quartz</h3>
+                <div class="containerHome" onclick="image2Clicked()" style="cursor: pointer">
+                    <img class="image" src="img/razerQuartz_home.jpg" alt="Product image should be here">
+                    <div class="overlay" style="background-color: pink">
+                        <div class="textImage" style="color: palevioletred">Explore More?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="text-align: center">
+                <h3 style="color:red">Up-Coming Collection</h3>
+                <div class="containerHome">
+                    <img class="image" src="img/logi_home.jpg" alt="Product image should be here">
+                    <div class="overlay" style="background-color: black">
+                        <div class="textImage" style="color: red">Comming Soon!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 0%;">
+        <div class="row">
+            <div class="col">
+                <div style="margin-top:5%; margin-left: 2%;">
+                    <p class="homeText">Created by: Dong Nguyen</p>
+                    <p class="homeText">Contact information: <a href="mailto:quexx4@gmail.com">Gmail</a>-<a
+                            href="mailto:N.dong83@outlook.com">Outlook</a></p>
+                    <p class="homeText">Phone Number: (+84) 0329455587</p>
+                </div>
+            </div>
+            <div class="col">
+                <div style="margin-top:5%;text-align: center">
+                    <p class="homeText">About My Self</p>
+                    <p class="homeText"><a
+                            href="https://www.rmit.edu.vn/programs/bachelor-engineering-software-engineering-honours">Banchelor
+                            of Software Engineer</a></p>
+                    <p class="homeText">My Current Work: Freelancer</p>
+                </div>
+            </div>
+            <div class="col">
+                <div style="margin-top:4%; margin-right: 2%; text-align: right">
+                    <p class="homeText">Follow Me</p>
+                    <p class="homeText">
+                        <img src="img/fb_logo.png" width="30" height="30" alt="The facebook logo should be here">
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://www.facebook.com/profile.php?id=100004307940153">Facebook</a></p>
+                    <p class="homeText">
+                        <img class="imageFree" src="img/fl_logo.png" width="150" height="30"
+                            alt="The Freelancer logo should be here" onclick="freeClicked()">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function regClicked() {
+        window.open("signUp.html");
+    }
+    function image1Clicked() {
+        window.open("razerMercury.html");
+    }
+    function image2Clicked() {
+        window.open("razerQuartz.html");
+    }
+    function freeClicked() {
+        window.open("https://www.freelancer.com");
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</html>
