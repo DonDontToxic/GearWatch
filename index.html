@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Gear Watch: Where to update lastest Razer products</title>
+  </head>
+
+  <body>
+    <div class="homebg" style="background-image: url(img/gearWatch_bg.jpg)">
+      <div class="container">
+        <h1 class="hero" style="color: purple">Welcome To The GearWatch</h1>
+      </div>
+      <div class="text-center">
+        <img
+          src="img/br_logo.png"
+          onclick="homeClicked()"
+          alt="The brand logo should be here"
+        />
+      </div>
+      <div class="text-center">
+        <img
+          src="img/scroller1.gif"
+          width="100px"
+          height="150px"
+          alt="Scroller should be here"
+        />
+      </div>
+    </div>
+
+    <div class="homebg" style="background-image: url(img/razer_bgg.jpg)">
+      <div class="container">
+        <h1 class="hero">
+          For <span class="display-1" style="color: #66b933">Gamers</span>, by
+          <span class="display-1" style="color: #66b933"> Gamers</span>
+        </h1>
+      </div>
+      <div class="text-center">
+        <img
+          src="img/razer_loop.gif"
+          width="300"
+          height="250"
+          alt="Razer Logo should be here"
+        />
+        <br />
+        <img
+          src="img/scroller2.gif"
+          alt="Scroller should be here"
+          width="150px"
+          height="100px"
+          style="margin-top: 0%"
+        />
+      </div>
+    </div>
+
+    <div class="homebg" style="background-image: url(img/mecury_bg.jpg)">
+      <div class="container">
+        <h1 class="hero">Razer Mecury Collection</h1>
+      </div>
+      <div class="text-center">
+        <img
+          id="gifOne"
+          src="img/click1.gif"
+          class="ima"
+          alt="Gif should be here"
+        />
+      </div>
+    </div>
+
+    <div class="homebg" style="background-image: url(img/quartz_bg.jpg)">
+      <div class="container">
+        <h1 class="hero" style="color: palevioletred">
+          Razer Quartz Collection
+        </h1>
+      </div>
+      <div class="text-center">
+        <img
+          id="gifTwo"
+          src="img/click2.gif"
+          alt="Gif should be here"
+          class="ima"
+        />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var gif1 = document.getElementById("gifOne");
+    var gif2 = document.getElementById("gifTwo");
+
+    gif1.onclick = function () {
+      window.open("razerMercury.html");
+    };
+    gif2.onclick = function () {
+      window.open("razerQuartz.html");
+    };
+
+    function homeClicked() {
+      window.open("aboutGW.html");
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
