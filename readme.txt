@@ -1,9 +1,4 @@
-Author: Nguyen Dong Dong   
-Student ID: s3634096
-Submitted Date: 23/6/2019
-Used Knowledge: https://www.w3schools.com
-
-In this assignment, a website called GearWatch has been built which aim to everone who interested in gaming gears.
+A website called GearWatch has been built which aim to everone who interested in gaming gears.
 To elaborate, Gear Watch is the place where gamers around the world can get access in order to get the lastest update 
 on new products from different famous brands on producing gaming gears. To illustrate, in this website, viewers can
 track on their favorite new collection as well as find some hot deals on these products which make this website special 
